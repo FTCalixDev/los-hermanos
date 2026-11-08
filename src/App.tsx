@@ -5,7 +5,6 @@ import {
   IgCroppedPhoto,
   LosHermanosEmblem,
 } from './components/LosHermanosEmblem';
-import { downloadStandaloneHtml } from './utils/exportSingleHtml';
 
 type MenuCategory = 'todos' | 'parrilla' | 'cocina' | 'bodega';
 
@@ -1229,13 +1228,6 @@ export default function App() {
               >
                 Instagram: @loshermanos_.comidas →
               </a>
-              <button
-                type="button"
-                onClick={downloadStandaloneHtml}
-                className="px-3.5 py-2 text-xs font-medium text-[#D6CEC2] hover:text-[#F4EFE6] bg-[#1A1614] hover:bg-[#231E1A] border border-[#2E2722] rounded-lg transition-colors cursor-pointer whitespace-nowrap"
-              >
-                Descargar entregable .HTML único
-              </button>
             </div>
           </div>
 
