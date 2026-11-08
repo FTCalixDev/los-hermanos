@@ -1,0 +1,6 @@
+{
+  "name": "Restaurante y Parrillada Los Hermanos",
+  "description": "Parrillada tradicional a leña y cocina casera familiar en San Gregorio de Polanco, Tacuarembó, Uruguay. Brasero completo, asado de tira, pastas y milanesas abundantes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

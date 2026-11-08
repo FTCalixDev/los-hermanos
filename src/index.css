@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Fraunces", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-hand: "Caveat", cursive;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #12100E;
+    color: #F4EFE6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-hand {
+    font-family: var(--font-hand);
+  }
+}
+
+.fogon-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(234, 88, 12, 0.16) 0%, rgba(217, 56, 30, 0.06) 45%, rgba(18, 16, 14, 0) 75%);
+}
+
+.chalkboard-surface {
+  background-color: #171412;
+  background-image: radial-gradient(rgba(244, 239, 230, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.mantel-surface {
+  background-color: #F4EFE6;
+  color: #231E1A;
+}
