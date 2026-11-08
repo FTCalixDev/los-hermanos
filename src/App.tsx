@@ -221,11 +221,6 @@ export default function App() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!clientName.trim()) {
-      setFormError('Por favor ingresá tu nombre para armar el mensaje a Marcos y el equipo.');
-      return;
-    }
-    setFormError('');
     const link = document.createElement('a');
     link.href = whatsappUrl;
     link.target = '_blank';
@@ -275,13 +270,25 @@ export default function App() {
           </a>
         </nav>
 
-        {/* Zone 3: 1 primary action */}
-        <div className="flex items-center shrink-0">
+        {/* Zone 3: Primary action + direct circular green WhatsApp button */}
+        <div className="flex items-center gap-2.5 shrink-0">
           <a
             href="#reservas"
             className="px-4 py-2 text-xs sm:text-sm font-semibold text-[#F4EFE6] bg-[#EA580C] hover:bg-[#D9460F] rounded-lg transition-colors whitespace-nowrap shrink-0 shadow-sm"
           >
             Reservar por WhatsApp
+          </a>
+          <a
+            href="https://wa.me/59894764118"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir chat directo de WhatsApp sin formulario"
+            title="Ir directo al WhatsApp 094 764 118"
+            className="w-9 h-9 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white flex items-center justify-center shadow-md transition-transform hover:scale-105 shrink-0"
+          >
+            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z" />
+            </svg>
           </a>
         </div>
       </header>
@@ -338,16 +345,27 @@ export default function App() {
 
               {/* Action & Live Schedule Bar */}
               <div className="pt-6 border-t border-[#2E2722]">
-                <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-5">
-                  <a
-                    href="#reservas"
-                    className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-semibold text-[#F4EFE6] bg-[#EA580C] hover:bg-[#D9460F] rounded-lg transition-colors whitespace-nowrap shrink-0 shadow-md"
-                  >
-                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z" />
-                    </svg>
-                    <span>Reservar Mesa o Pedir · 094 764 118</span>
-                  </a>
+                <div className="flex flex-wrap items-center gap-3 mb-5">
+                  <div className="flex items-center gap-2.5">
+                    <a
+                      href="#reservas"
+                      className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-semibold text-[#F4EFE6] bg-[#EA580C] hover:bg-[#D9460F] rounded-lg transition-colors whitespace-nowrap shrink-0 shadow-md"
+                    >
+                      <span>Reservar por WhatsApp · 094 764 118</span>
+                    </a>
+                    <a
+                      href="https://wa.me/59894764118"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Enviar WhatsApp directo sin formulario"
+                      title="Abrir WhatsApp directo sin rellenar formulario"
+                      className="w-11 h-11 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white flex items-center justify-center shadow-md transition-transform hover:scale-105 shrink-0"
+                    >
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z" />
+                      </svg>
+                    </a>
+                  </div>
                   <a
                     href="#la-carta"
                     className="inline-flex items-center justify-center px-5 py-3.5 text-sm font-medium text-[#F4EFE6] bg-[#1C1815] hover:bg-[#26201C] border border-[#38302A] rounded-lg transition-colors whitespace-nowrap shrink-0"
@@ -1057,21 +1075,15 @@ export default function App() {
                   </pre>
                 </div>
 
-                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                  <button
-                    type="submit"
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-[#F4EFE6] bg-[#EA580C] hover:bg-[#D9460F] rounded-lg transition-colors cursor-pointer shadow-md whitespace-nowrap"
-                  >
-                    <span>Enviar Reserva / Consulta por WhatsApp</span>
-                    <span aria-hidden="true">→</span>
-                  </button>
+                <div className="pt-2">
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 py-3.5 text-xs font-medium text-[#D6CEC2] hover:text-[#F4EFE6] bg-[#12100E] border border-[#38302A] rounded-lg transition-colors whitespace-nowrap"
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-[#F4EFE6] bg-[#EA580C] hover:bg-[#D9460F] rounded-lg transition-colors cursor-pointer shadow-md whitespace-nowrap"
                   >
-                    Abrir enlace directo
+                    <span>Enviar Reserva / Consulta por WhatsApp</span>
+                    <span aria-hidden="true">→</span>
                   </a>
                 </div>
               </form>
