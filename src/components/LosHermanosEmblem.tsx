@@ -15,7 +15,7 @@ export interface IgCropSpec {
 export const IG_PHOTOS: Record<string, IgCropSpec> = {
   parrilla_fuego_lena: {
     id: 'parrilla_fuego_lena',
-    src: '/assets/aistudio/image_28076d22.png',
+    src: './assets/aistudio/image_28076d22.png',
     sx: 4,
     sy: 362,
     sw: 240,
@@ -26,7 +26,7 @@ export const IG_PHOTOS: Record<string, IgCropSpec> = {
   },
   asado_chorizos_parrilla: {
     id: 'asado_chorizos_parrilla',
-    src: '/assets/aistudio/image_8b8be166.png',
+    src: './assets/aistudio/image_8b8be166.png',
     sx: 505,
     sy: 34,
     sw: 240,
@@ -37,7 +37,7 @@ export const IG_PHOTOS: Record<string, IgCropSpec> = {
   },
   adolfo_parrillero: {
     id: 'adolfo_parrillero',
-    src: '/assets/aistudio/image_b4e3859f.png',
+    src: './assets/aistudio/image_b4e3859f.png',
     sx: 250,
     sy: 34,
     sw: 240,
@@ -48,7 +48,7 @@ export const IG_PHOTOS: Record<string, IgCropSpec> = {
   },
   braseros_mesa_familiar: {
     id: 'braseros_mesa_familiar',
-    src: '/assets/aistudio/image_28076d22.png',
+    src: './assets/aistudio/image_28076d22.png',
     sx: 756,
     sy: 32,
     sw: 242,
@@ -59,7 +59,7 @@ export const IG_PHOTOS: Record<string, IgCropSpec> = {
   },
   carro_vino_tannat: {
     id: 'carro_vino_tannat',
-    src: '/assets/aistudio/image_b4e3859f.png',
+    src: './assets/aistudio/image_b4e3859f.png',
     sx: 4,
     sy: 18,
     sw: 240,
@@ -70,7 +70,7 @@ export const IG_PHOTOS: Record<string, IgCropSpec> = {
   },
   salon_milanesas_familia: {
     id: 'salon_milanesas_familia',
-    src: '/assets/aistudio/image_28076d22.png',
+    src: './assets/aistudio/image_28076d22.png',
     sx: 505,
     sy: 362,
     sw: 240,
@@ -81,7 +81,7 @@ export const IG_PHOTOS: Record<string, IgCropSpec> = {
   },
   patio_nocturno_luces: {
     id: 'patio_nocturno_luces',
-    src: '/assets/aistudio/image_b4e3859f.png',
+    src: './assets/aistudio/image_b4e3859f.png',
     sx: 748,
     sy: 34,
     sw: 239,
@@ -92,7 +92,7 @@ export const IG_PHOTOS: Record<string, IgCropSpec> = {
   },
   espalda_camiseta_parrillero: {
     id: 'espalda_camiseta_parrillero',
-    src: '/assets/aistudio/image_28076d22.png',
+    src: './assets/aistudio/image_28076d22.png',
     sx: 254,
     sy: 362,
     sw: 240,
