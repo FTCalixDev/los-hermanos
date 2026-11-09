@@ -2,82 +2,39 @@
 
 @layer base {
   :root {
-    --font-display: "Oswald", Impact, sans-serif;
-    --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: "Fraunces", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-hand: "Caveat", cursive;
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: #0D0D12;
-    color: #FFFFFF;
+    background-color: #1C1917;
+    color: #F5F0E6;
     overflow-x: hidden;
   }
 
-  h1, h2, h3, .font-display {
+  h1, h2, h3, h4, .font-display {
     font-family: var(--font-display);
   }
-}
 
-/* Hide horizontal scrollbar on category pills while keeping touch scroll */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Staggered fade-up animation for menu feed items */
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  .font-hand {
+    font-family: var(--font-hand);
   }
 }
 
-.animate-fade-up {
-  animation: fade-up 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.fogon-glow {
+  background-color: #1C1917;
+  background-image: radial-gradient(circle at 50% 0%, rgba(234, 88, 12, 0.18) 0%, rgba(200, 75, 49, 0.07) 45%, rgba(28, 25, 23, 0) 75%);
 }
 
-/* Continuous WhatsApp breathing pulse-glow requested in spec */
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+.chalkboard-surface {
+  background-color: #171412;
+  background-image: radial-gradient(rgba(245, 240, 230, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
 }
 
-.wa-pulse-glow {
-  animation: pulse-glow 2s infinite;
-}
-
-/* Red neon button glow */
-.red-neon-glow {
-  box-shadow: 0 8px 28px -4px rgba(255, 42, 42, 0.42);
-}
-
-/* Spring tactile press feedback */
-.spring-press {
-  transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.16s ease;
-}
-.spring-press:active {
-  transform: scale(0.96);
-}
-
-/* Menu item image zoom on hover/active */
-.menu-thumb-zoom {
-  transition: transform 0.4s ease;
-}
-.group:hover .menu-thumb-zoom,
-.group:active .menu-thumb-zoom {
-  transform: scale(1.08);
+.mantel-surface {
+  background-color: #F5F0E6;
+  color: #26211D;
 }

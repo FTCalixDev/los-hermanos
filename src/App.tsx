@@ -230,9 +230,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#12100E] text-[#F4EFE6] pb-16 md:pb-0">
+    <div className="min-h-screen bg-[#1C1917] text-[#F5F0E6] pb-16 md:pb-0">
       {/* STRICT 3-ZONE TOP BAR CONTRACT */}
-      <header className="sticky top-0 z-40 flex items-center justify-between gap-8 px-6 lg:px-12 py-4 bg-[#12100E]/95 backdrop-blur-md border-b border-[#2E2722]">
+      <header className="sticky top-0 z-40 flex items-center justify-between gap-8 px-6 lg:px-12 py-4 bg-[#1C1917]/95 backdrop-blur-md border-b border-[#2E2722]">
         {/* Zone 1: Single text element wordmark */}
         <a
           href="#inicio"
@@ -476,7 +476,7 @@ export default function App() {
       </section>
 
       {/* SECTION 2: EL FOGON, LA COCINA Y GALERIA REAL DE INSTAGRAM (PAPEL CREMA MANTEL) */}
-      <section id="el-fogon" className="mantel-surface py-16 lg:py-24 border-b border-[#DED6C6]">
+      <section id="el-fogon" className="mantel-surface bg-[#F5F0E6] text-[#26211D] py-16 lg:py-24 border-b border-[#DED6C6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           {/* Editorial Asymmetric Story Header */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end mb-14">
@@ -603,7 +603,7 @@ export default function App() {
       </section>
 
       {/* SECTION 3: LA CARTA DEL PARRILLERO Y LA COCINA CASERA (CHALKBOARD & IRON) */}
-      <section id="la-carta" className="chalkboard-surface py-16 lg:py-24 border-b border-[#2E2722]">
+      <section id="la-carta" className="chalkboard-surface bg-[#1C1917] text-[#F5F0E6] py-16 lg:py-24 border-b border-[#2E2722]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
             <div>
@@ -717,7 +717,7 @@ export default function App() {
       </section>
 
       {/* SECTION 4: MURO DE RESENAS REALES Y COMODIDADES DEL LOCAL (REDISEÑADO EN CREMA MANTEL) */}
-      <section id="resenas" className="mantel-surface py-16 lg:py-24 border-b border-[#DED6C6]">
+      <section id="resenas" className="mantel-surface bg-[#F5F0E6] text-[#26211D] py-16 lg:py-24 border-b border-[#DED6C6]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
             <div>
@@ -885,7 +885,7 @@ export default function App() {
       </section>
 
       {/* SECTION 5: REDISEÑO DE LAS ULTIMAS PARTES — SIMULADOR DE WHATSAPP + UBICACION Y HORARIOS */}
-      <section id="reservas" className="py-16 lg:py-24 bg-[#12100E] border-b border-[#2E2722]">
+      <section id="reservas" className="py-16 lg:py-24 bg-[#1C1917] text-[#F5F0E6] border-b border-[#2E2722]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="max-w-3xl mb-12">
             <p className="text-xs font-semibold text-[#EA580C] mb-2">
