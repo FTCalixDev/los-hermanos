@@ -2,38 +2,82 @@
 
 @layer base {
   :root {
-    --font-display: "Fraunces", Georgia, serif;
-    --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-hand: "Caveat", cursive;
+    --font-display: "Oswald", Impact, sans-serif;
+    --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: #12100E;
-    color: #F4EFE6;
+    background-color: #0D0D12;
+    color: #FFFFFF;
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, .font-display {
+  h1, h2, h3, .font-display {
     font-family: var(--font-display);
   }
+}
 
-  .font-hand {
-    font-family: var(--font-hand);
+/* Hide horizontal scrollbar on category pills while keeping touch scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Staggered fade-up animation for menu feed items */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.fogon-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(234, 88, 12, 0.16) 0%, rgba(217, 56, 30, 0.06) 45%, rgba(18, 16, 14, 0) 75%);
+.animate-fade-up {
+  animation: fade-up 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.chalkboard-surface {
-  background-color: #171412;
-  background-image: radial-gradient(rgba(244, 239, 230, 0.03) 1px, transparent 0);
-  background-size: 24px 24px;
+/* Continuous WhatsApp breathing pulse-glow requested in spec */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }
 
-.mantel-surface {
-  background-color: #F4EFE6;
-  color: #231E1A;
+.wa-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Red neon button glow */
+.red-neon-glow {
+  box-shadow: 0 8px 28px -4px rgba(255, 42, 42, 0.42);
+}
+
+/* Spring tactile press feedback */
+.spring-press {
+  transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.16s ease;
+}
+.spring-press:active {
+  transform: scale(0.96);
+}
+
+/* Menu item image zoom on hover/active */
+.menu-thumb-zoom {
+  transition: transform 0.4s ease;
+}
+.group:hover .menu-thumb-zoom,
+.group:active .menu-thumb-zoom {
+  transform: scale(1.08);
 }
